@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:forms="clr-namespace:SignaturePad.Forms;assembly=SignaturePad.Forms"
+             x:Class="Exercise2_2.Principal"
+             BackgroundImageSource="background.jpg">
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout>
+            <Label Text="Escribe tu firma aki debajo" TextColor="White" FontSize="19" HorizontalTextAlignment="Center"/>
+            <forms:SignaturePadView x:Name="firmita" 
+                            BackgroundColor="White"
+                            StrokeWidth="1" 
+                            HeightRequest="320" PromptText="(👉ﾟヮﾟ)👉"
+                                    CaptionText="firma aki"/>
+            <Label Text="Nombre:" TextColor="White" FontSize="22" HorizontalTextAlignment="Center"/>
+            <Entry x:Name="txtname" Margin="15" Placeholder="nombre de firma" 
+                   PlaceholderColor="White" Keyboard="Text" HorizontalTextAlignment="Center"/>
+            <Label Text="Descripcion:" TextColor="White" FontSize="22" HorizontalTextAlignment="Center"/>
+            <Entry x:Name="txtdesc" Margin="15" Placeholder="descripcion de la firma" 
+                   PlaceholderColor="White" Keyboard="Text" HorizontalTextAlignment="Center"/>
+            <Grid RowSpacing="0"
+                  ColumnSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200" />
+                    <ColumnDefinition Width="200" />
+                </Grid.ColumnDefinitions>
+                    <Button BackgroundColor="#32a852" x:Name="btnSave"
+                            Grid.Row="0" Grid.Column="0" Text="A SQLite" Clicked="btnSave_Clicked" CornerRadius="15" Margin="10"/>
+                    <Button BackgroundColor="#bf482a" x:Name="btnDelete"
+                            Grid.Row="0" Grid.Column="1" Text="BORRAR" Clicked="btnDelete_Clicked" CornerRadius="15" Margin="10"/>
+            </Grid>
+                <Button BackgroundColor="#226880" x:Name="btnLista" Text="LISTA FIRMAS" Clicked="btnLista_Clicked" CornerRadius="15" Margin="10"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
