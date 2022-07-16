@@ -33,10 +33,6 @@ namespace Exercise2_2.Views
             {
                 try
                 {
-                    //var folder = await Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
-                    //string path = System.IO.Path.Combine(folder.ToString(), "image.jpg");
-                    //var file = await path.CreateFileAsync("image.jpg", CreationCollisionOption.ReplaceExisting);
-
                     var Storagepath = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "/FOTOS1";
                     if (!Directory.Exists(Path.Combine(Storagepath, "ACH")))
                     {
